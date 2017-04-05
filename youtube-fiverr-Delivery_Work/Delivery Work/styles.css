@@ -1,0 +1,189 @@
+body {
+ 	text-align:center;
+ 	margin: 0;
+ 	padding: 0;
+ 	font-family: Arial,Verdana, Helvetica, sans-serif; 
+ 	color:#000000;
+ 	font-size: 11pt;
+ 	background:#848484;
+}
+
+#main
+{
+	margin:0 auto;
+	width:900px;
+}
+
+#header
+{
+	background:#848484;
+	background-image:url(images/header.png);
+	width:900px;
+	height:85px;
+}
+
+#header h1 { 
+	margin:0;
+	padding:25px 0px 0px 0px;}
+
+#navigation-bar
+{
+	float:left;
+	width:900px;
+	background:#000000;
+}
+
+#navigation-bar ul
+{
+	margin:0;
+	padding:0;
+}
+
+#navigation-bar ul li
+{
+	list-style-type:none;
+	display:inline;
+}
+
+#navigation-bar li a
+{
+	display:block;
+	float:left;
+	padding:5px 10px;
+	color:#fff;
+	text-decoration:none;
+	border-right:1px solid #fff;
+}
+
+#navigation-bar li a:hover 
+{ 
+	background:#065106; 
+}
+
+h1
+{
+	font-family: Arial;
+	font-size: 17pt;
+        text-align: center;
+}
+
+h2
+{
+	font-family: Arial;
+	font-size: 14pt;
+}
+
+h3
+{
+	font-family: Arial;
+	font-size: 12pt;
+	text-align: center;
+}
+
+#article-box
+{
+	float:left;
+	width:900px;
+	background:#fff url(images/right-column.gif) repeat-y 100% 0;
+}
+
+#content
+{
+	clear:left;
+	float:left;
+	width:600px;
+	padding:20px 0;
+	margin:0 0 0 30px;
+	display:inline;
+	background:#ffffff;
+	text-align:left;
+}
+
+#content h2 
+{ 
+	margin:0; 
+}
+
+#right-column
+{
+	float:right;
+	width:200px;
+	padding:20px 10px 10px 5px;
+	display:inline;
+	background:#e0e0e0;
+	text-align:center;
+}
+
+#right-column h3 
+{ 
+	margin:0; 
+}
+
+.right-box
+{
+	width:180px;
+	background:#fff;
+	margin:10px 25px 10px 0px;
+	padding:12px 0px 12px 0px;
+	border:2px solid #ccc;	
+	text-align:center;
+}
+
+#autoresponder
+{
+	text-align:center;
+}
+
+#autoresponder-box
+{
+	width:180px;
+	background:#fff;
+	margin:10px 25px 10px 0px;
+	padding:12px 0px 2px 0px;
+	border:2px solid #ccc;	
+	text-align:center;
+}
+
+#videos
+{
+ 	text-align:center;
+}
+
+#footer
+{
+	clear:both;
+	color: #ffffff;
+	background:#000000;
+	text-align:center;
+	padding:15px 0px 20px 0px;
+	height:1%;
+}
+
+a.footerlink	
+{			
+	color: #ffffff;
+	font-family: Arial, Verdana;
+	font-size: 10pt;
+	text-decoration: none;
+	text-decoration:underline;
+}
+html {
+  background: url(http://josserand.com/images/saturn_constellation.big.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+background: url(http://josserand.com/images/saturn_constellation.big.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+

@@ -1,0 +1,15 @@
+<script type="text/javascript">
+amzn_assoc_placement = "adunit0";
+amzn_assoc_search_bar = "true";
+amzn_assoc_tracking_id = "josserandcom-20";
+amzn_assoc_ad_mode = "manual";
+amzn_assoc_ad_type = "smart";
+amzn_assoc_marketplace = "amazon";
+amzn_assoc_region = "US";
+amzn_assoc_title = "Business Startup Help";
+amzn_assoc_textlinks = "1599185563,158979799X,0307887898,B005IN6OEK,0984999302,1599183870,0071753931,B013UZPJUC,B01B9WE454,B01BSF806Q,1599185563,158979799X,0307887898,B005IN6OEK";
+amzn_assoc_linkid = "8ab0709072e2e449dbb2988ec639cf13";
+amzn_assoc_asins = "1599185563,158979799X,0307887898,B005IN6OEK";
+amzn_assoc_size = "180x600";
+</script>
+<script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>

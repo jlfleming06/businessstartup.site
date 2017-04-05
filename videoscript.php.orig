@@ -1,0 +1,94 @@
+<?php
+
+class Video {
+
+    private $values = array(
+        'keyword' => '',
+        'amount' => '1',
+        'title' => '',
+        'width' => '480',
+        'height' => '360',
+        'version' => 'new'
+    );
+    private $string;
+    /**
+     *
+     * @param string $keyword Keyword you wish to grab vids for
+     * @param int $amount Amount of videos you wish to grab
+     * @return array Array of video URL's
+     */
+    private function getVids($keyword) {
+        // Build URL
+        $url = "http://gdata.youtube.com/feeds/api/videos?orderby=relevance&alt=json&v=2&max-results=" . $this->values['amount'] . "&q=" . urlencode($keyword);
+        // Get JSON and decode from YouTube API
+        $json = file_get_contents($url);
+        $json = json_decode($json, true);
+        // Grab the link to each video and store it in an array
+        foreach ($json['feed']['entry'] as $entry) {
+            $urls[] = $entry['content']['src'];
+        }
+        return $urls;
+    }
+
+    /**
+     *
+     * @param array $args Array of arguments to build / format the videos
+     */
+    public function videoWidget($args) {
+        // Over-ride the default values if they are set
+        foreach ($args as $key => $value) {
+            $this->values[$key] = $value;
+        }
+
+        //Make sure a keyword is set
+        if (!empty($this->values['keyword'])) {
+            // Get list of URL's
+            $list = $this->getVids($this->values['keyword']);
+            if ($this->values['version'] == 'old') {
+                // Old Iframe based Embed Code
+                //
+                // Show title if set
+                if (!empty($this->values['title'])) {
+                    $this->string.='<h2 class="vid-title">' . $this->values['title'] . '</h2>';
+                }
+
+                // Loop through every video
+                foreach ($list as $url) {
+                    // wrap in container for styling
+                    $this->string.='<div class="video-container">';
+                    // video embed code
+                    $this->string.='<object width="'.$this->values['width'].'" height="'.$this->values['height'].'"><param name="movie" value="' . $url . '"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="' . $url . '" type="application/x-shockwave-flash" width="'.$this->values['width'].'" height="'.$this->values['height'].'" allowscriptaccess="always" allowfullscreen="true"></embed></object>';
+
+                    // close styling div
+                    $this->string.='</div><br><br><br>';
+                }
+            } else {
+                // New Embed Code
+                //
+                // Show title if set
+                if (!empty($this->values['title'])) {
+                    $this->string.='<h2 class="vid-title">' . $this->values['title'] . '</h2>';
+                }
+
+                //Loop through every video
+                foreach ($list as $url) {
+                    // wrap in container for styling
+                    $this->string.='<div class="video-container">';
+                    // video embed code
+                    $this->string.='<iframe width="'.$this->values['width'].'" height="'.$this->values['height'].'" src="'.$url.'" frameborder="0" allowfullscreen></iframe>';
+
+                    // close styling div
+                    $this->string.='</div><br><br><br>';
+                }
+
+            }
+        } else {
+            //Run if no keyword is set
+            return "You didn't set a keyword!";
+        }
+        return $this->string;
+    }
+
+}
+
+?>

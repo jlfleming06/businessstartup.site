@@ -1,0 +1,15 @@
+<script type="text/javascript">
+amzn_assoc_placement = "adunit0";
+amzn_assoc_search_bar = "true";
+amzn_assoc_tracking_id = "josserandcom-20";
+amzn_assoc_ad_mode = "manual";
+amzn_assoc_ad_type = "smart";
+amzn_assoc_marketplace = "amazon";
+amzn_assoc_region = "US";
+amzn_assoc_title = "Business How-To";
+amzn_assoc_textlinks = "B00A1F6BIY,B01BWL9W0E,B00UBRGMI6,B000SW16M6,B004JRYE5W,B00YBX8374,B0030M3HIC,B01BXDBRCW,B004GFCFN0,B00C4QGCD2,B002P5D48I,B01BWG4Q6E,B00STYJFBE,B01BXDBRCW";
+amzn_assoc_linkid = "8b5f2c7230adade5b44316787679103a";
+amzn_assoc_asins = "B002P5D48I,B01BWG4Q6E,B00STYJFBE,B01BXDBRCW";
+amzn_assoc_size = "180x600";
+</script>
+<script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
